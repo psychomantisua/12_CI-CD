@@ -30,13 +30,6 @@ jobs:
 
     - name: Run unit tests
       run: dotnet test
-
-    - run: mkdir -p TestResults
-
-    - name: Upload test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-results
     
     - name: Run script manually
       if: github.event_name == 'manual_trigger'
